@@ -1,0 +1,46 @@
+backend:
+  name: github
+  repo: vandenbroucke/vlaam.ms
+  branch: main
+
+media_folder: static/images
+public_folder: /images
+
+collections:
+  - name: news_en
+    label: News (English)
+    folder: content/en/post
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Date, name: date, widget: datetime, format: "YYYY-MM-DDTHH:mm:ssZ" }
+      - { label: Draft, name: draft, widget: boolean, default: true }
+      - { label: Body, name: body, widget: markdown }
+      - label: Tags
+        name: tags
+        widget: list
+        default: []
+        field:
+          label: Tag
+          name: tag
+          widget: string
+
+  - name: news_nl
+    label: Nieuws (Nederlands)
+    folder: content/nl/post
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Date, name: date, widget: datetime, format: "YYYY-MM-DDTHH:mm:ssZ" }
+      - { label: Draft, name: draft, widget: boolean, default: true }
+      - { label: Body, name: body, widget: markdown }
+      - label: Tags
+        name: tags
+        widget: list
+        default: []
+        field:
+          label: Tag
+          name: tag
+          widget: string

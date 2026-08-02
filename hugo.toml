@@ -1,0 +1,22 @@
+baseURL = 'https://vlaa.ms/'
+locale = 'en-us'
+title = 'Vlaams nieuws en verhalen'
+theme = "hugo-theme-stack"
+
+defaultContentLanguage = "nl"
+
+[languages]
+  [languages.en]
+    languageCode = "en"
+    languageName = "English"
+    contentDir = "content/en"
+    weight = 2
+
+  [languages.nl]
+    languageCode = "nl"
+    languageName = "Nederlands"
+    contentDir = "content/nl"
+    weight = 1
+
+[taxonomies]
+  tag = "tags"
