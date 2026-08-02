@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: vandenbroucke/vlaam.ms
+  repo: vandenbroucke/vlaa.ms
   branch: main
 
 media_folder: static/images
